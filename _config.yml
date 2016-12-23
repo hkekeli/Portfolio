@@ -17,8 +17,8 @@ title: Kekeli Sackey
 email: kekeli@bolddesign.org
 description: > # this means to ignore newlines until "baseurl:"
   The design portfolio of Kekeli H. Sackey, UI/UX designer in DC
-baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://kekeli.tech" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kekeliTech
 github_username:  hkekeli
 google_analytics: UA-34840387-1
