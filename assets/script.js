@@ -1,14 +1,5 @@
 var skybox;  // Global variable
 
-function toggle_skybox(){
-  // Purpose: toggle between the two types of skyboxes
-  if(skybox == ''){
-      apply_skybox('night');
-  } else {
-      apply_skybox('main');
-  }
-}
-
 function apply_skybox(new_skybox){
   //Purpose: given a skybox; change the current stylesheet to reflect it
   //Get the body element
@@ -17,7 +8,6 @@ function apply_skybox(new_skybox){
   skybox = new_skybox;
   body.className = new_skybox;
 };
-
 
 function is_it_night(){
   // Returns a boolean
@@ -36,7 +26,6 @@ function is_it_night(){
 
   return false;
 }
-
 
 if(is_it_night()) {
   apply_skybox('night');
