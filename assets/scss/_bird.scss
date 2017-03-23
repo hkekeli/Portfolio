@@ -20,10 +20,6 @@ $z-index-below: -1;
 $z-index-default: 1;
 $z-index-above: 2;
 
-// wings
-$wing-divider-width: $value-8;
-$wing-divider-height: $value-5;
-
 @mixin style($background-color, $width, $height) {
   width: $width;
   height: $height;
@@ -53,7 +49,7 @@ $wing-divider-height: $value-5;
 
 .head-wrapper {
 	float: right;
-	transform: translate(72px, -132px);
+    @include transform(translate(72px, -132px));
 
 	.head {
 	  @include style($violet, $base-value, $value-4);
@@ -64,14 +60,12 @@ $wing-divider-height: $value-5;
 	.beak {
 		@include style($black, $base-value, $base-value);
 		@include clip-path(polygon(0 79%, 0 94%, 73% 88%));
-        transform: translate(96px, -170px);
-        //clip-path: url(#clip-beak);
+        @include transform(translate(96px, -170px));
 
 		&--lower {
           @include clip-path(polygon(0 88%, 0 94%, 73% 88%));
           transform: translate(85px, -273px);
         }
-
 	}
 }
 
@@ -100,9 +94,9 @@ $wing-divider-height: $value-5;
 
 
 .wings {
+  @include transform(translate(135px, -121px));
   position: absolute;
   right: 120px;
-  transform: translate(135px, -121px);
   z-index: $z-index-above;
 
   .wing-wrapper {
@@ -125,7 +119,7 @@ $wing-divider-height: $value-5;
       }
 
       .wing-one-top {
-        @include style(lighten($blue, 18%), $wing-divider-width, $wing-divider-height);
+        @include style(lighten($blue, 18%), $value-8, $value-5);
         @include clip-path(polygon(64% 6%, 0% 34%, 50% 51%));
         position: absolute;
         top: 29px;
@@ -134,7 +128,7 @@ $wing-divider-height: $value-5;
 
       .wing-one-top-right {
         @include clip-path(polygon(73% 88%, 35% 28%, 29% 46%));
-        @include style(#7b88ff, $wing-divider-width, $wing-divider-height);
+        @include style(#7b88ff, $value-8, $value-5);
         position: absolute;
         right: -46px;
         top: 2px;
@@ -143,7 +137,7 @@ $wing-divider-height: $value-5;
 
       .wing-one-right {
         @include clip-path(polygon(99% 57%, 54% 12%, 45% 39%));
-        @include style(#7b88ff, $wing-divider-width, $wing-divider-height);
+        @include style(#7b88ff, $value-8, $value-5);
           margin-left: 9px;
           position: absolute;
           top: 44px;

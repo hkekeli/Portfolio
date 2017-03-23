@@ -1,0 +1,22 @@
+{
+  "name": "kekeli",
+  "version": "1.0.0",
+  "description": " ",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkekeli/Portfolio.git"
+  },
+  "author": "Kekeli Sackey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkekeli/Portfolio/issues"
+  },
+  "homepage": "https://github.com/hkekeli/Portfolio#readme",
+  "devDependencies": {
+    "postcss-clip-path-polyfill": "^1.0.4"
+  }
+}

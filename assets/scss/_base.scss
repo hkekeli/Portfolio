@@ -17,8 +17,6 @@ $blue: #0D29FE;
 $black: #000;
 $yellow: #FFCC00;
 $wapo-blue: #1955a5;
-$accent: #009688;
-$green: #4CAF50;
 $light-gray: #949494;
 
 $branding: 'Raleway', sans-serif;
@@ -132,7 +130,7 @@ a {
 
   .power-pitch-description {
     font-size: $fs-medium;
-    line-height: 2.2;
+    line-height: 2;
     font-weight: $regular;
   }
 }
@@ -146,7 +144,7 @@ a {
   display: none;
 }
 
-// Animation mixins
+// Transform & Animation mixins
 
 @mixin transform($transforms) {
   -moz-transform: $transforms;
