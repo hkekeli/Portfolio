@@ -1,0 +1,123 @@
+// Bird Animation
+
+.shape {
+  animation: fly-animation 12s 1 forwards;
+  transform-style: preserve-3d;
+}
+
+.wing-wrapper {
+  animation: .4s wing-animation infinite forwards;
+}
+
+.long-tail {
+  animation: 2s tail-animation 2 forwards;
+}
+
+.head-wrapper {
+  animation: 4s head-animation 1 forwards;
+  animation-delay: 5s;
+}
+
+.beak--lower {
+  animation: 4s lower-beak-animation 1 forwards;
+  animation-delay: 5s;
+}
+
+.feet {
+  animation: 3s leg-animation 1 forwards;
+}
+
+@keyframes tail-animation {
+    0% {
+      transform: rotate(-4deg);
+    }
+
+   100% {
+     transform: rotate(1deg);
+   }
+}
+
+@keyframes wing-animation {
+  0% {
+    transform: rotate(0deg);
+    transition: transform 300ms linear;
+  }
+
+  50% {
+    transform: translate(21px, -40px) rotate(32deg);
+  }
+
+  100% {
+   transform: translate(57px, 51px) rotate(-82deg);
+  }
+}
+
+@keyframes head-animation {
+  0% {
+    transform: translate(72px, -132px);
+  }
+
+ 25% {
+   //head bent
+    transform: translate(10px, -130px) rotate(76deg);
+   }
+
+  50% {
+    transform: translate(72px, -132px);
+  }
+
+  70% {
+    //head bent
+   transform: translate(10px, -130px) rotate(76deg);
+  }
+
+  100% {
+    transform: translate(72px, -132px);
+  }
+}
+
+@keyframes lower-beak-animation {
+  0% {
+    //beak closed
+    transform: translate(85px, -273px);
+  }
+
+  50% {
+    //beak open
+    display: block;
+    transform: translate(85px, -264px);
+
+  }
+  100% {
+    //beak closed
+    transform: translate(85px, -273px);
+  }
+}
+
+@keyframes fly-animation {
+    0% {
+      transform: translate3d(-60vw, 0, 0)  scale(0.6);
+    }
+
+    25% {
+      transform: translate3d(-25vw, 0px, 0) scale(0.6);
+    }
+
+    35% {
+      transform: translate3d(0.5vw, -90px, 0) scale(0.6);
+    }
+
+    88% {
+      transform: translate3d(0.5vw, -90px, 0) scale(0.6);
+    }
+
+    100% {
+      transform: translate3d(80vw, 0, 0) scale(0.6);
+    }
+}
+
+@keyframes leg-animation {
+  100% {
+    transform: rotate(-37deg);
+  }
+}

@@ -413,7 +413,8 @@ button {
   overflow: hidden;
 
   img {
-    margin-top: 13px;
+    margin-top: 1
+    3px;
     width: 85%;
   }
 
@@ -423,16 +424,6 @@ button {
       -webkit-animation: pulse 1s ease-out 3;
       transition: 1s;
       -webkit-transition: 1s;
-  }
-}
-
-.photos h2 {
-  &:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid $light-blue;
   }
 }
 

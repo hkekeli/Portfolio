@@ -1,0 +1,196 @@
+// Vars
+
+// Font sizes
+
+$body-txt: 1rem; //16px
+$fs-xtr-lg: 6rem;
+$fs-medium: 18px;
+$fs-small: 10px;
+
+// font weight
+$regular: 400;
+$bold: 600;
+$bolder: 800;
+
+// Colors
+$blue: #0D29FE;
+$black: #000;
+$yellow: #FFCC00;
+$wapo-blue: #1955a5;
+$accent: #009688;
+$green: #4CAF50;
+$light-gray: #949494;
+
+$branding: 'Raleway', sans-serif;
+
+// Layout & media queries
+
+$lg-screen: 'screen and (min-width: 60rem)';
+$sm-screen: 'screen and (min-width: 30rem)';
+
+$pg-wrapper-width: 40rem;
+
+// Functions & Mixins
+
+@mixin vertical-centering {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: $branding;
+  justify-content: center;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+a {
+  &,
+  &:link,
+  &:active {
+    color: $black;
+    font-weight: $bold;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $blue;
+    color: $black;
+  }
+
+  &.natgeo {
+    border-bottom: 3px solid $yellow;
+
+    &:hover {
+      border-bottom: 2px solid $blue;
+    }
+  }
+
+  &.wapo {
+    color: $wapo-blue;
+  }
+
+  &.bump {
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+}
+
+.wapo {
+  color: $wapo-blue;
+}
+
+// Layout
+
+.pg-wrapper {
+  padding: 1rem;
+  position: relative;
+
+  @media #{$lg-screen} {
+    padding: 0;
+    max-width: $pg-wrapper-width;
+    margin: 0 auto;
+  }
+}
+
+// Power Pitch
+.power-pitch {
+  .power-pitch-header {
+    font-weight: $bold;
+
+    @media #{$lg-screen} {
+      font-size: $fs-xtr-lg;
+      margin-left: -6px;
+      line-height: 0;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .power-pitch-description {
+    font-size: $fs-medium;
+    line-height: 2.2;
+    font-weight: $regular;
+  }
+}
+
+.tooltip {
+  width: 150px;
+  border: 2px solid $blue;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  display: none;
+}
+
+// Animation mixins
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin scale($scale-1, $scale-2) {
+  @include transform(scale($scale-1, $scale-2));
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate($deg));
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+
+
+
+
+
+
