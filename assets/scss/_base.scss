@@ -130,8 +130,8 @@ a {
 
   .power-pitch-description {
     font-size: $fs-medium;
-    line-height: 2;
     font-weight: $regular;
+    line-height: 2;
   }
 }
 
@@ -185,10 +185,3 @@ a {
 @mixin translate($x, $y) {
   @include transform(translate($x, $y));
 }
-
-
-
-
-
-
-

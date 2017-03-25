@@ -1,6 +1,7 @@
 $black: #000;
 $dark-blue: #0114a4;
 $violet: #4056fe;
+$light-blue: #7b88ff;
 
 // Layout
 $base-value: 100px; // Initial 100px;
@@ -75,7 +76,7 @@ $z-index-above: 2;
 	top: 26px;
 	z-index: $z-index-default;
 	.one {
-      @include style(#7b88ff, $value-2, $value-3);
+      @include style($light-blue, $value-2, $value-3);
       @include clip-path(polygon(94% 23%, 51% 3%, 17% 32%));
 	}
 	.two {
@@ -101,7 +102,7 @@ $z-index-above: 2;
 
   .wing-wrapper {
       .wing-two {
-        @include style(#7b88ff, $value-10, $value-7);
+        @include style($light-blue, $value-10, $value-7);
         @include clip-path(polygon(62% 2%, 98% 47%, 75% 72%, 0 23%));
       }
 
@@ -128,7 +129,7 @@ $z-index-above: 2;
 
       .wing-one-top-right {
         @include clip-path(polygon(73% 88%, 35% 28%, 29% 46%));
-        @include style(#7b88ff, $value-8, $value-5);
+        @include style($light-blue, $value-8, $value-5);
         position: absolute;
         right: -46px;
         top: 2px;
@@ -137,7 +138,7 @@ $z-index-above: 2;
 
       .wing-one-right {
         @include clip-path(polygon(99% 57%, 54% 12%, 45% 39%));
-        @include style(#7b88ff, $value-8, $value-5);
+        @include style($light-blue, $value-8, $value-5);
           margin-left: 9px;
           position: absolute;
           top: 44px;

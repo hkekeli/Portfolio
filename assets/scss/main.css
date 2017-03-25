@@ -57,8 +57,8 @@ a.bump {
       padding-bottom: 1.5rem; } }
 .power-pitch .power-pitch-description {
   font-size: 18px;
-  line-height: 2.2;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 2; }
 
 .tooltip {
   width: 150px;
@@ -83,6 +83,10 @@ a.bump {
 
 .head-wrapper {
   float: right;
+  -moz-transform: translate(72px, -132px);
+  -o-transform: translate(72px, -132px);
+  -ms-transform: translate(72px, -132px);
+  -webkit-transform: translate(72px, -132px);
   transform: translate(72px, -132px); }
   .head-wrapper .head {
     width: 100px;
@@ -97,6 +101,10 @@ a.bump {
     background: #000;
     -webkit-clip-path: polygon(0 79%, 0 94%, 73% 88%);
     clip-path: polygon(0 79%, 0 94%, 73% 88%);
+    -moz-transform: translate(96px, -170px);
+    -o-transform: translate(96px, -170px);
+    -ms-transform: translate(96px, -170px);
+    -webkit-transform: translate(96px, -170px);
     transform: translate(96px, -170px); }
     .head-wrapper .beak--lower {
       -webkit-clip-path: polygon(0 88%, 0 94%, 73% 88%);
@@ -132,9 +140,13 @@ a.bump {
     top: -209px; }
 
 .wings {
+  -moz-transform: translate(135px, -121px);
+  -o-transform: translate(135px, -121px);
+  -ms-transform: translate(135px, -121px);
+  -webkit-transform: translate(135px, -121px);
+  transform: translate(135px, -121px);
   position: absolute;
   right: 120px;
-  transform: translate(135px, -121px);
   z-index: 2; }
   .wings .wing-wrapper .wing-two {
     width: 221px;
@@ -315,6 +327,10 @@ a.bump {
     top: 12px; }
 
 .shape {
+  -webkit-animation: fly-animation 12s 1 forwards;
+  -moz-animation: fly-animation 12s 1 forwards;
+  -ms-animation: fly-animation 12s 1 forwards;
+  -o-animation: fly-animation 12s 1 forwards;
   animation: fly-animation 12s 1 forwards;
   transform-style: preserve-3d; }
 
