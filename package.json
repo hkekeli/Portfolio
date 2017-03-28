@@ -4,7 +4,7 @@
   "description": " ",
   "main": " ",
   "scripts": {
-    "postcss": "postcss _site/assets/scss/main.css -o assets/scss/main.postcss.css",
+    "postcss": "postcss _site/css/main.css -o css/main.postcss.css",
     "test": " "
   },
   "repository": {

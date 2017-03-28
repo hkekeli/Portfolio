@@ -3,9 +3,8 @@
 // Font sizes
 
 $body-txt: 1rem; //16px
-$fs-xtr-lg: 6rem;
+$fs-xtr-lg: 5.5rem;
 $fs-medium: 18px;
-$fs-small: 10px;
 
 // font weight
 $regular: 400;
@@ -17,7 +16,7 @@ $blue: #0D29FE;
 $black: #000;
 $yellow: #FFCC00;
 $wapo-blue: #1955a5;
-$light-gray: #949494;
+$light-gray: #4C4C4C;
 
 $branding: 'Raleway', sans-serif;
 
@@ -119,19 +118,22 @@ a {
 .power-pitch {
   .power-pitch-header {
     font-weight: $bold;
+    letter-spacing: 4px;
 
     @media #{$lg-screen} {
       font-size: $fs-xtr-lg;
       margin-left: -6px;
       line-height: 0;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1rem;
     }
   }
 
   .power-pitch-description {
+    color: $light-gray;
     font-size: $fs-medium;
     font-weight: $regular;
     line-height: 2;
+    margin: 0;
   }
 }
 

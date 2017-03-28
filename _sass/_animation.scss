@@ -1,17 +1,16 @@
 // Bird Animation
 
 .shape {
-  //animation: 12s fly-animation 1 forwards;
   @include animation(fly-animation 12s 1 forwards);
   transform-style: preserve-3d;
 }
 
 .wing-wrapper {
-  animation: .4s wing-animation infinite forwards;
+  @include animation(wing-animation .4s infinite forwards);
 }
 
 .long-tail {
-  animation: 2s tail-animation 2 forwards;
+  @include animation(2s tail-animation 2 forwards);
 }
 
 .head-wrapper {
