@@ -45,6 +45,19 @@ $z-index-above: 2;
     max-width: 500px;
     position: relative;
     transform: scale(0.6);
+    z-index: $z-index-above;
+  }
+}
+
+.dot {
+  @media #{$lg-screen} {
+    width: 14px;
+    height: 13px;
+    background: transparent;
+    position: absolute;
+    top: 25px;
+    right: -21px;
+    z-index: $z-index-default;
   }
 }
 
