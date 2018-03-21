@@ -51,12 +51,12 @@ $z-index-above: 2;
 
 .dot {
   @media #{$lg-screen} {
-    width: 14px;
-    height: 13px;
+    width: 6px;
+    height: 8px;
     background: transparent;
     position: absolute;
-    top: 25px;
-    right: -21px;
+    top: 38px;
+    right: -23px;
     z-index: $z-index-default;
   }
 }
