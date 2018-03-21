@@ -94,27 +94,27 @@
 
 @keyframes dot-animation {
   0% {
-    width: 6px;
+    width: 3px;
     background: $white;
   }
 
   50% {
-    width: 6px;
+    width: 3px;
     background: $white;
   }
 
   51% {
-    width: 14px;
+    width: 8px;
     background: $white;
   }
 
   70% {
-    width: 14px;
+    width: 8px;
     background: $white;
   }
 
   100% {
-    width: 14px;
+    width: 8px;
     background: $white;
   }
 }

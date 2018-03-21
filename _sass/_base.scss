@@ -1,11 +1,13 @@
 // Vars
+//Sizes
+
+$sm-value: 12px;
 
 // Font sizes
 
 $body-txt: 1rem; //16px
-$fs-xtr-lg: 5.5rem;
-$fs-medium: 18px;
-
+$fs-medium: 16px;
+$fs-sm: $sm-value;
 // font weight
 $regular: 400;
 $bold: 600;
@@ -14,11 +16,11 @@ $bolder: 800;
 // Colors
 $blue: #0D29FE;
 $black: #000;
-$yellow: #FFCC00;
-$wapo-blue: #1955a5;
 $light-gray: #4C4C4C;
 $white: #FFF;
 
+$primary-color: $blue;
+$secondary-color: #D5FFF5;
 $branding: 'Raleway', sans-serif;
 
 // Layout & media queries
@@ -80,26 +82,10 @@ a {
     color: $black;
   }
 
-  &.natgeo {
-    border-bottom: 3px solid $yellow;
-
-    &:hover {
-      border-bottom: 2px solid $blue;
-    }
-  }
-
-  &.wapo {
-    color: $wapo-blue;
-  }
-
   &.bump {
     font-size: 1.5rem;
     line-height: 0;
   }
-}
-
-.wapo {
-  color: $wapo-blue;
 }
 
 // Layout
@@ -117,18 +103,6 @@ a {
 
 // Power Pitch
 .power-pitch {
-  .power-pitch-header {
-    font-weight: $bold;
-    letter-spacing: 4px;
-
-    @media #{$lg-screen} {
-      font-size: $fs-xtr-lg;
-      margin-left: -6px;
-      line-height: 0;
-      padding-bottom: 1rem;
-    }
-  }
-
   .power-pitch-description {
     color: $light-gray;
     font-size: $fs-medium;
@@ -138,13 +112,40 @@ a {
   }
 }
 
-.tooltip {
-  width: 150px;
-  border: 2px solid $blue;
-  padding: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  display: none;
+
+.name {
+  display: block;
+  font-size: 2rem;
+
+  @media #{$lg-screen} {
+    font-size: 3.9rem;
+  }
+}
+
+.name-spelling {
+  font-size: $fs-sm;
+  font-weight: bold;
+}
+
+.social-links {
+  padding-left: 0;
+  font-size: 13px;
+  margin-top: 2rem;
+
+  li {
+    display: block;
+    margin-bottom: $sm-value;
+
+    @media #{$lg-screen} {
+      display: inline-block;
+      margin: $sm-value 24px 0 0;
+    }
+
+    a {
+      background: $secondary-color;
+      font-weight: bold;
+    }
+  }
 }
 
 // Transform & Animation mixins
