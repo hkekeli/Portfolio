@@ -19,10 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The design portfolio of Kekeli H. Sackey, UI/UX designer in DC
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://kekeli.tech" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kekeliTech
-github_username:  hkekeli
 google_analytics: UA-34840387-1
-
 
 # Build settings
 markdown: kramdown
@@ -33,5 +30,5 @@ exclude:
   - Gemfile.lock
 
 sass:
-  sass: _sass
+  sass_dir: _sass
   style: compressed

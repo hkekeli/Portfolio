@@ -1,44 +1,5 @@
-// Vars
-//Sizes
-
-$sm-value: 12px;
-
-// Font sizes
-
-$body-txt: 1rem; //16px
-$fs-medium: 16px;
-$fs-sm: $sm-value;
-// font weight
-$regular: 400;
-$bold: 600;
-
-// Colors
-$blue: #0D29FE;
-$black: #000;
-$light-gray: #4C4C4C;
-$white: #FFF;
-
-$primary-color: $blue;
-$secondary-color: #D5FFF5;
-$branding: 'Raleway', sans-serif;
-
-// Layout & media queries
-
-$lg-screen: 'screen and (min-width: 60rem)';
-$sm-screen: 'screen and (min-width: 30rem)';
-
-$pg-wrapper-width: 40rem;
-
-// Functions & Mixins
-
-@mixin vertical-centering {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 // Reset
+
 html {
   box-sizing: border-box;
 }
@@ -52,6 +13,7 @@ body {
   overflow: hidden;
 }
 
+// Site
 body {
   align-items: center;
   display: flex;
@@ -111,7 +73,6 @@ a {
   }
 }
 
-
 .name {
   display: block;
   font-size: 2rem;
@@ -147,44 +108,3 @@ a {
   }
 }
 
-// Transform & Animation mixins
-
-@mixin transform($transforms) {
-  -moz-transform: $transforms;
-  -o-transform: $transforms;
-  -ms-transform: $transforms;
-  -webkit-transform: $transforms;
-  transform: $transforms;
-}
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-@mixin scale($scale-1, $scale-2) {
-  @include transform(scale($scale-1, $scale-2));
-}
-
-@mixin rotate($deg) {
-  @include transform(rotate($deg));
-}
-
-@mixin translate($x, $y) {
-  @include transform(translate($x, $y));
-}

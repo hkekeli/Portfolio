@@ -1,5 +1,4 @@
 // Bird Animation
-
 .shape {
   @include animation(fly-animation 12s 1 forwards);
   transform-style: preserve-3d;
