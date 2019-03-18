@@ -6,4 +6,4 @@ Run `bundle exec jekyll serve`
 
 `jekyll serve`
 
-`npm run postcss`
+`yarn run postcss`

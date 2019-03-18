@@ -4,7 +4,7 @@
   "description": " ",
   "main": " ",
   "scripts": {
-    "postcss": "postcss _site/css/main.css -o css/main.postcss.css",
+    "postcss": "postcss _site/assets/main.css -o assets/main.postcss.css",
     "test": " "
   },
   "repository": {
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/hkekeli/Portfolio#readme",
   "devDependencies": {
-    "postcss": "^5.2.18",
-    "postcss-cli": "^3.0.0",
+    "postcss": "^7.0.14",
+    "postcss-cli": "^6.1.2",
     "postcss-clip-path-polyfill": "^1.0.4"
   }
 }
