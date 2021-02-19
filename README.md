@@ -2,8 +2,6 @@
 
 My portfolio site
 
-Run `bundle exec jekyll serve`
+1. Run `bundle exec jekyll serve`
 
-`jekyll serve`
-
-`yarn run postcss`
+2. `yarn run postcss`
