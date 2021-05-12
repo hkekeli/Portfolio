@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/hkekeli/Portfolio#readme",
   "devDependencies": {
-    "postcss": "^7.0.14",
+    "postcss": "^8.2.10",
     "postcss-cli": "^6.1.2",
     "postcss-clip-path-polyfill": "^1.0.4"
   }
