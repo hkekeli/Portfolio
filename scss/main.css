@@ -45,9 +45,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.5rem;
-  line-height: 2;
   font-family: "Helvetica Neue", sans-serif;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 60rem) {
+  nav {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
 }
 
 a.logo {
