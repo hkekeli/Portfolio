@@ -1,0 +1,289 @@
+// Clip path maker: https://bennettfeely.com/clippy/
+
+$black: #000;
+$dark-blue: #0114a4;
+$violet: #4056fe;
+$light-blue: #7b88ff;
+$blue: #0D29FE;
+$blue-2:#334aff;
+$blue-3: #6676ff;
+$blue-4:#97a2ff;
+$blue-5:#7383fe;
+$blue-6:#8391ff;
+$blue-7:#6676ff;
+
+// New colors
+
+$black: #000;
+$dark-blue: #5d5d5d;
+$violet: #4a4a4a;
+$light-blue: #909090;
+$blue: #000;
+$blue-2: #000000;
+$blue-3: #000;
+$blue-4:#000;
+$blue-5:#000;
+$blue-6:#000;
+$blue-7:#666;
+// Layout
+$base-value: 100px; // Initial 100px;
+$value-2: $base-value + 15px;    //115px;
+$value-3: $base-value + 19px;   // 119px;
+$value-4: $base-value + 40px;   //140px;
+$value-5: $base-value + 28px;   //128px
+$value-6: $base-value + 48px;   //148px
+$value-7: $base-value + 76px ;  //176px
+$value-8: $base-value + 107px;  //207px
+$value-9: $base-value + 119px;  //219px
+$value-10: $base-value + 121px; //221px
+$value-11: $base-value + 160px; //260px
+
+// z-index
+$z-index-below: -1;
+$z-index-default: 1;
+$z-index-above: 2;
+
+@mixin style($background-color, $width, $height) {
+  width: $width;
+  height: $height;
+  background: $background-color;
+}
+
+@mixin clip-path($path) {
+  -webkit-clip-path: $path;
+  clip-path: $path;
+}
+
+.bird-wrapper {
+  position: absolute;
+  pointer-events: none;
+}
+
+.bird {
+  transform: scale(0.3);
+
+  @media #{$lg-screen} {
+    display: block;
+    max-width: 500px;
+    position: relative;
+    transform: scale(0.6);
+    z-index: $z-index-above;
+
+    display: none;
+  }
+}
+
+.i-dot {
+  @media #{$lg-screen} {
+    width: 6px;
+    height: 8px;
+    background: transparent;
+    position: absolute;
+    top: 38px;
+    right: -23px;
+    z-index: $z-index-default;
+  }
+}
+
+.head-wrapper {
+	float: right;
+    @include transform(translate(226px, -156px));
+
+	.head {
+	  @include style($violet, $base-value, $value-4);
+      @include clip-path(polygon(57% 14%, 99% 31%, 74% 83%, 4% 51%));
+      transform: rotate(11deg);
+      width: 141px;
+      height: 177px;
+      background: #4a4a4a;
+	}
+
+	.beak {
+		@include style($black, $base-value, $base-value);
+		@include clip-path(polygon(0 79%, 0 94%, 73% 88%));
+        @include transform(translate(138px, -187px));
+
+		&--lower {
+          @include clip-path(polygon(0 88%, 0 94%, 73% 88%));
+          transform: translate(138px, -284px);
+        }
+	}
+}
+
+// Wings-part 2
+// This is the left wing
+.wing-class-one-wrapper {
+  // defines the dimensions of the wings
+  //display:none;
+
+
+  @include transform(translate(115px, -600px));
+  border:2px solid red;
+  height: 600px;
+  width: 200px;
+  position: absolute;
+  z-index: 2;
+
+  .wing-class-one {
+    @include style(red, 346px, 118px);
+	@include clip-path(polygon(60% 7%, 6% 1%, 93% 99%));
+    @include translate(-106px, 500px);
+  }
+
+  .wing-class-two {
+    @include style(pink, 197px, 118px);
+	@include clip-path(polygon(0 60%, 0 92%, 100% 100%));
+    @include translate(-74px, 272px);
+  }
+
+  .wing-class-three {
+    @include style(green, 200px, 170px);
+	@include clip-path(polygon(0 0, 100% 100%, 0 100%));
+    @include translate(-81px, 99px);
+  }
+
+  .wing-class-four {
+    @include style(blue, 197px, 119px);
+	@include clip-path(polygon(100% 0, 0 0, 100% 100%));
+    @include translate(-76px, -26px);
+  }
+
+  .wing-class-five {
+    @include style(purple, 197px, 100px);
+	@include clip-path(polygon(0 23%, 29% 100%, 100% 100%));
+    @include translate(-134px, -247px);
+  }
+
+  .wing-class-six {
+    @include style(pink, 197px, 146px);
+	@include clip-path(polygon(27% 0, 0 66%, 100% 100%));
+    @include translate(-132px, -423px);
+  }
+}
+
+// This is the right wing
+.wing-class-two-wrapper {
+  // defines the dimmensions of the wings
+
+
+  display: none;
+
+
+  @include transform(translate(131px, -600px));
+  border:2px solid blue;
+  height: 600px;
+  width: 200px;
+  position: absolute;
+
+  .wing-class-one {
+    @include style(blue, 350px, 118px);
+	@include clip-path(polygon(60% 7%, 6% 1%, 93% 99%));
+    @include translate(-106px, 500px);
+  }
+
+  .wing-class-two {
+
+  }
+  .wing-class-three {
+
+  }
+  .wing-class-four {
+
+  }
+  .wing-class-five {
+
+  }
+  .wing-class-six {
+
+  }
+}
+
+
+// Below the wing
+
+.chest-top {
+    @include style(#7F7F7F, 177px, 105px);
+	@include clip-path(polygon(42% 10%, 0 55%, 100% 99%));
+    @include translate(152px, -85px);
+    position: absolute;
+    z-index: -2;
+}
+
+//.chest-mid {
+//    @include style(#7F7F7F, 178px, 136px);
+//	@include clip-path(polygon(0 44%, 81% 35%, 100% 76%));
+//    @include translate(152px, -85px);
+//    position: absolute;
+//    z-index: -2;
+//}
+
+.chest-bottom {
+    @include style(black, 179px, 136px);
+	@include clip-path(polygon(0 43%, 52% 100%, 99% 77%));
+    @include translate(152px, -85px);
+    position: absolute;
+}
+
+.mid {
+	@include style(#979797, 297px, 306px);
+	@include clip-path(polygon(73% 28%, -8% 54%, 100% 59%));
+	margin-left: 52px;
+	position: absolute;
+	top: -154px;
+	transform: rotate(-11deg);
+}
+
+.tail {
+  transform: translate(-104px, 53px);
+    .top {
+		@include style(lighten($blue, 18%), $value-4, $value-4);
+		@include clip-path(polygon(78% 0, 1% 48%, 68% 42%));
+	}
+
+	.top-two {
+      @include style(lighten($blue, 28%), 172px, 77px);
+      @include clip-path(polygon(48% 56%, 65% -1%, 25% 67%));
+      left: -17px;
+      position: absolute;
+      top: 10px;
+	}
+
+	.bottom {
+		@include style($blue, $value-4, $value-4);
+		@include clip-path(polygon(69% 42%, 18% 48%, 65% 54%));
+		transform: translate(-25px, -$value-4);
+	}
+
+	.long-tail {
+		@include style($black, $value-11, $value-4);
+		@include clip-path(polygon(73% 24%, 65% 14%, 0 70%));
+		left: -117px;
+		position: absolute;
+		top: 26px;
+		z-index: $z-index-below;
+	}
+}
+
+
+//.head-container {
+//	height: $base-value;
+//	position: absolute;
+//    transform: translate(39px, 46px);
+//  z-index: $z-index-default;
+//	.one {
+//      @include style($light-blue, $value-2, $value-3);
+//      @include clip-path(polygon(94% 23%, 51% 3%, 17% 32%));
+//	}
+//	.two {
+//      @include style($violet, $value-2, $value-3);
+//      @include clip-path(polygon(95% 2%, 50% 6%, 67% 47%));
+//      position: relative;
+//      top: -95px;
+//	}
+//	.three {
+//      @include style($blue-3, $value-2, $value-2);
+//      @include clip-path(polygon(61% 0%, 15% 8%, 68% 45%));
+//      position: relative;
+//      top: -209px;
+//	}
+//}

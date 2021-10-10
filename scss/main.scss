@@ -1,0 +1,199 @@
+// Vars
+// Units
+$sm-value: 12px;
+
+// Typography
+$branding: 'Source Serif Pro', serif;
+$branding-secondary: 'Helvetica Neue', sans-serif;
+$branding: 'Helvetica Neue', sans-serif;
+
+// Font sizes
+$fs-sm: $sm-value;
+$fs-medium: 2rem; // 16px;
+
+// font weight
+$branding-regular: 400;
+$branding-semibold: 600;
+$branding-bold: 700;
+
+
+// Colors
+$black: #000;
+$light-gray: #4C4C4C;
+$white: #FFF;
+
+$secondary-color: #D5FFF5;
+
+$emphasis: inset 0 -0.6em 0 rgb(175 165 225 / 60%);
+
+
+// Layout & media queries
+$lg-screen: 'screen and (min-width: 60rem)';
+$sm-screen: 'screen and (min-width: 30rem)';
+$pg-wrapper-width: 60rem;
+$container-width: 80rem;
+
+// Reset
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+ -webkit-font-smoothing: antialiased;
+}
+
+// Site
+
+body {
+  font-family: $branding;
+  line-height: 1.5;
+  background:#f4f3ed;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+a {
+  &,
+  &:link,
+  &:active {
+    color: $black;
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: $emphasis;
+    color: $black;
+  }
+}
+// Navigation
+
+header {
+  padding: 24px 0;
+  margin-bottom: 4rem;
+
+   @media #{$lg-screen} {
+    margin-bottom: 10rem;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-family: $branding-secondary;
+}
+
+a.logo {
+  font-weight: $branding-bold;
+}
+
+.nav-links {
+  a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+// Layout
+
+.container {
+  @media #{$lg-screen} {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+}
+
+.page-wrapper {
+  padding: 1rem;
+  position: relative;
+
+  @media #{$lg-screen} {
+    padding: 0;
+    max-width: $pg-wrapper-width;
+    margin: 0 auto;
+  }
+}
+
+.pitch {
+  font-size: 1.3rem;
+  line-height: 1.6;
+
+  @media #{$lg-screen} {
+    font-size: 2rem;
+  }
+}
+
+.emphasis {
+  font-weight: $branding-semibold;
+
+  &--bold{
+    font-weight: $branding-bold;
+  }
+}
+
+.about {
+  font-family: $branding;
+  font-size: 1rem;
+
+   @media #{$lg-screen} {
+      font-size: 1.4rem;
+      line-height: 1.7;
+  }
+}
+
+footer {
+  font-family: $branding-secondary;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+
+  @media #{$lg-screen} {
+    margin-top: 7rem;
+    padding-top: 1rem;
+  }
+}
+
+.social-links {
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-right: 3rem;
+    margin-bottom: 5px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@import 'animation-mixins';
+@import 'bird';
+@import 'svg-bird';
