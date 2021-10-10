@@ -149,6 +149,12 @@ footer {
   justify-content: space-between;
 }
 
+.flex-justify-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .bird-wrapper {
   position: absolute;
   pointer-events: none;
