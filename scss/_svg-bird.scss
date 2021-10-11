@@ -10,15 +10,19 @@ $bird-5:"data:image/svg+xml,%3Csvg width='875' height='568' viewBox='0 0 875 568
 $bird-6:"data:image/svg+xml,%3Csvg width='875' height='560' viewBox='0 0 875 560' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Crect width='875' height='560'/%3E%3Cg opacity='.421' transform='matrix(1 0 0 -1 470 499.723)' stroke='%23DEDEDE'%3E%3Cpolyline stroke-width='1.92' fill='%232C2B2B' points='19.7021071 176.928635 170.693246 176.928635 146.469268 308.816911'/%3E%3Cpolygon stroke-width='1.92' fill='%232C2B2B' points='2.18737329e-14 106.086476 19.7021071 176.928635 170.693246 176.928635'/%3E%3Cpolygon stroke-width='1.92' fill='%232C2B2B' points='19.7021071 180.599229 19.7021071 314.588265 144.000323 310.99594'/%3E%3Cpolyline stroke-width='1.92' fill='%232C2B2B' points='19.7021071 176.928635 170.693246 176.928635 146.469268 308.816911'/%3E%3Cpolygon stroke-width='1.92' fill='%232C2B2B' points='2.18737329e-14 106.086476 19.7021071 176.928635 170.693246 176.928635'/%3E%3Cpolygon stroke-width='.768' fill='%23777' points='2.64560455 106.086476 170.807783 176.928635 59.5827682 7.85720976e-14'/%3E%3C/g%3E%3Cg transform='translate(0 128.938)'%3E%3Cpolygon fill='%231C1B1B' transform='rotate(16 148.396 155.71)' points='279.243784 74.415579 267.892613 117.368491 17.5478398 237.004175'/%3E%3Cpolygon fill='%238F8989' transform='rotate(-179 222.417 149.092)' points='204.576683 140.976996 252.627191 154.571862 192.206871 157.206568'/%3E%3Cpolygon fill='%230F0F0F' transform='scale(1 -1) rotate(-14 184.088 0)' points='731.569364 66.2841043 874.141508 75.6840923 725.245711 84.8895954'/%3E%3Cpolygon fill='%23171717' transform='rotate(14 687.53 76.52)' points='617.435573 57.1944236 699.281024 19.4487952 757.623791 49.0833468 698.585294 133.592402'/%3E%3Cpolygon fill='%23434343' transform='rotate(14 451.385 86.928)' points='490.431823 31.8779849 586.924334 122.37167 315.844939 141.978304'/%3E%3Cpolygon fill='%23252121' transform='rotate(14 587.513 110.765)' points='488.708671 65.518568 686.318013 110.665747 585.201181 156.012253'/%3E%3Cpath d='M342.693876,71.7398552 L330.113582,146.800979 L203.378287,163.321861 L342.693876,71.7398552 Z' stroke='%23FFF' fill='%23C2C2C2' transform='rotate(16 272.331 117.396)'/%3E%3Cpath d='M311.35832,100.882511 L326.498269,154.92329 L274.584007,161.22037 L311.35832,100.882511 Z' stroke='%23FFF' stroke-width='2' fill='%23494646' opacity='.296' transform='rotate(16 300.216 130.43)'/%3E%3Cpolygon stroke='%23DEDEDE' stroke-width='.6' fill='%237F7F7F' transform='rotate(14 596.73 73.803)' points='497.924418 66.6501196 695.53376 111.797298 615.395396 35.8088313'/%3E%3C/g%3E%3Cg opacity='.421' transform='matrix(1 0 0 -1 416 550.737)'%3E%3Cpath d='M144.239466,325.950699 L204.42839,381.362889 L83.2708221,379.078111 L144.239466,325.950699 Z' stroke='%23FFF' fill='%23585858'/%3E%3Cpolyline stroke='%23DEDEDE' fill='%232C2B2B' points='19.6796104 180.917266 170.498341 180.917266 144.878971 324.895055'/%3E%3Cpolygon stroke='%23DEDEDE' stroke-width='1.92' fill='%232C2B2B' points='2.18487565e-14 106.086476 19.6796104 176.928635 170.498341 176.928635'/%3E%3Cpath d='M20.6396104,183.163484 L143.059141,323.74529 L20.6396104,313.703785 L20.6396104,183.163484 Z' stroke='%23DEDEDE' stroke-width='1.92' fill='%232C2B2B'/%3E%3Cpolygon stroke='%23DEDEDE' fill='%232E2929' points='19.6796104 314.588265 85.2491706 379.310929 144.248634 325.279513'/%3E%3Cpolygon stroke='%23DEDEDE' stroke-width='.768' fill='%232C2C2C' points='2.64258369 106.086476 170.612747 176.928635 59.514734 7.85720976e-14'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
 
 .svg-bird-wrapper {
-  position: absolute;
-  pointer-events: none;
-  @include animation(fly-bird 10s infinite);
+    position: absolute;
+    pointer-events: none;
+    @include animation(fly-bird 10s 1);
+
+    @media #{$lg-screen} {
+        @include animation(fly-bird 10s infinite);
+    }
 }
 
 .bird-wings-up {
   // Animation duration needs to match the overall animation duration otherwise the wings stop animating mid-way
   @include animation(wing-animation 1s infinite);
-  transform: scale(0.3);
+  transform: scale(0.2);
   position: relative;
   pointer-events: auto;
   z-index: $z-index-above;
