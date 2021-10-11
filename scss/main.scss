@@ -1,3 +1,6 @@
+@import 'media-queries';
+@import 'animation-mixins';
+
 // Vars
 // Units
 $sm-value: 12px;
@@ -8,30 +11,33 @@ $branding-secondary: 'Helvetica Neue', sans-serif;
 $branding: 'Helvetica Neue', sans-serif;
 
 // Font sizes
-$fs-sm: $sm-value;
-$fs-medium: 2rem; // 16px;
+$fs-sm: 1em;
+$fs-md: 2em;
+$fs-lg: 3em;
 
 // font weight
 $branding-regular: 400;
 $branding-semibold: 600;
 $branding-bold: 700;
 
-
 // Colors
 $black: #000;
 $light-gray: #4C4C4C;
 $white: #FFF;
-
 $secondary-color: #D5FFF5;
 
-$emphasis: inset 0 -0.6em 0 rgb(175 165 225 / 60%);
+
+// z-index
+$z-index-below: -1;
+$z-index-default: 1;
+$z-index-above: 2;
 
 
-// Layout & media queries
-$lg-screen: 'screen and (min-width: 60rem)';
-$sm-screen: 'screen and (min-width: 30rem)';
-$pg-wrapper-width: 60rem;
+$emphasis: inset 0px -8px 0 #6e7bd9ad;
+
+// Layout
 $container-width: 80rem;
+
 
 // Reset
 
@@ -74,18 +80,21 @@ a {
   }
 
   &:hover {
-    box-shadow: $emphasis;
-    color: $black;
+    box-shadow: $emphasis
   }
 }
+
 // Navigation
 
 header {
   padding: 24px 0;
   margin-bottom: 4rem;
 
-   @media #{$lg-screen} {
-    margin-bottom: 10rem;
+  @media #{$lg-screen} {
+    margin-bottom: 6rem;
+  }
+  @media #{$xlg-screen} {
+      margin-bottom: 10rem;
   }
 }
 
@@ -96,10 +105,16 @@ nav {
   font-family: $branding-secondary;
   padding: 0 1rem;
 
-  @media #{$lg-screen} {
-    font-size: 1.5rem;
+    @media #{$lg-screen} {
+        font-size: $fs-sm;
+        line-height: 2;
+    }
+
+  @media #{$xlg-screen} {
+    font-size: 1.5em;
     line-height: 2;
   }
+
 }
 
 a.logo {
@@ -108,7 +123,7 @@ a.logo {
 
 .nav-links {
   a {
-    margin-right: 1rem;
+    margin-left: 1rem;
     text-decoration: none;
     color: inherit;
   }
@@ -123,21 +138,18 @@ main {
 // Layout
 
 .container {
-  @media #{$lg-screen} {
-    max-width: $container-width;
-    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media #{$md-screen} {
+        max-width: $container-width;
+        padding: 0 2rem;
   }
 }
 
-.page-wrapper {
-  padding: 1rem;
-  position: relative;
-
-  @media #{$lg-screen} {
-    padding: 0;
-    max-width: $pg-wrapper-width;
-    margin: 0 auto;
-  }
+.intro {
+    @media #{$lg-screen} {
+        width: 65%;
+    }
 }
 
 .pitch {
@@ -145,7 +157,7 @@ main {
   line-height: 1.6;
 
   @media #{$lg-screen} {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -159,10 +171,10 @@ main {
 
 .about {
   font-family: $branding;
-  font-size: 1rem;
+  font-size: 1em;
 
    @media #{$lg-screen} {
-      font-size: 1.4rem;
+      font-size: 1.2em;
       line-height: 1.7;
   }
 }
@@ -170,10 +182,10 @@ main {
 footer {
   font-family: $branding-secondary;
   margin-top: 3rem;
-  font-size: 1.2rem;
+  font-size: $fs-sm;
 
   @media #{$lg-screen} {
-    margin-top: 7rem;
+    margin-top: 5rem;
     padding-top: 1rem;
   }
 }
@@ -183,8 +195,12 @@ footer {
 
   li {
     list-style: none;
-    margin-right: 3rem;
+    margin-left: 2rem;
     margin-bottom: 5px;
+
+      @media #{$lg-screen} {
+          margin-left: 3rem;
+      }
   }
 }
 
@@ -204,6 +220,4 @@ footer {
   justify-content: center;
 }
 
-@import 'animation-mixins';
-@import 'bird';
 @import 'svg-bird';
