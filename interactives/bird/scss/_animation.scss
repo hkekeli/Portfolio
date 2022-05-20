@@ -1,0 +1,111 @@
+// Bird Animation
+
+
+.shape {
+  animation: fly-animation 6s 1 forwards;
+  transform: rotateY(21deg);
+  top: 203px;
+}
+
+.long-tail {
+  animation: 2s tail-animation 2 forwards;
+}
+
+.wing-wrapper {
+  animation: .4s wing-animation infinite forwards;
+}
+
+.head-wrapper {
+  animation: 1s head-animation 1 forwards;
+  animation-delay: 5s;
+}
+
+@keyframes tail-animation {
+    0% {
+      transform: rotate(-4deg);
+    }
+
+   100% {
+     transform: rotate(1deg);
+   }
+}
+
+@keyframes wing-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translate(16px, -49px) rotate(55deg);
+    transform: translate(21px, -40px) rotate(32deg);
+    transform: translate(21px, -27px) rotate(14deg);
+  }
+
+  100% {
+   transform: translate(57px, 51px) rotate(-82deg);
+  }
+}
+
+@keyframes head-animation {
+  100%{
+    transform: translate(40px, -91px) rotate(76deg);
+  }
+}
+
+//@keyframes fly-animation {
+//    0% {
+//      transform: translate3d(3vw, 93px, 11px) rotate(295deg);
+//    }
+//
+//    25% {
+//      transform: translate3d(3vw, 138px, 11px) rotate(295deg);
+//    }
+//
+//    50% {
+//      transform: translate3d(5vw, 138px, 11px) rotateY(21deg);
+//    }
+//
+//    70% {
+//      transform: translate3d(25vw, 138px, 11px) rotateY(21deg);
+//    }
+//
+//    85% {
+//      transform: translate3d(35vw, 176px, 0) rotateY(-135deg);
+//    }
+//
+//    90% {
+//      transform: translate3d(40vw, 304px, 0) rotateY(-153deg) rotate(295deg);
+//    }
+//
+//  100% {
+//    transform: translate3d(-25vw, 315px, 11px) rotate(334deg);
+//
+//  }
+//}
+
+
+@keyframes fly-animation {
+    0% {
+      transform: translate3d(-25vw, 315px, 11px) rotate(334deg);
+    }
+
+    50% {
+      transform: translate3d(5vw, 138px, 11px) rotateY(21deg);
+    }
+
+    70% {
+      transform: translate3d(25vw, 138px, 11px) rotateY(21deg);
+    }
+
+    85% {
+      transform: translate3d(35vw, 176px, 0) rotateY(-135deg);
+    }
+
+    87% {
+      transform: translate3d(40vw, 304px, 0) rotateY(-153deg) rotate(295deg);
+    }
+
+    100% {
+      transform: translate3d(-25vw, 315px, 11px) rotate(334deg);
+    }
+}

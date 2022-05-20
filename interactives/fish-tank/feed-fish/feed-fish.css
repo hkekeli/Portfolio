@@ -1,0 +1,179 @@
+body {
+  background: #f1f1f1;
+  font-family: "helvetica neue", arial, sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.fish-tank {
+  height: 350px;
+  margin: 100px auto 0;
+  padding: 50px;
+  border-top: 10px solid #C3DBE2;
+  border-bottom: 70px solid #2B3D69;
+  position: relative;
+  background: #2AB7AB;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#btn {
+  background: #2B3D69;
+  color: white;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 16px;
+  animation: 0.1s shake 15;
+}
+
+img {
+  width: 100px;
+}
+
+@keyframes swim2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes swim2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+@keyframes swim3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@-webkit-keyframes swim3 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+  }
+}
+@keyframes float {
+  from {
+    bottom: 130px;
+    left: 0;
+  }
+  to {
+    bottom: 500px;
+    left: 0;
+    background: yellow;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes float {
+  from {
+    transform: translate(12rem, 3rem);
+  }
+  to {
+    transform: translate(1rem, 0);
+    background: yellow;
+    opacity: 0;
+  }
+}
+@keyframes float2 {
+  from {
+    transform: translate(12rem, 3rem);
+  }
+  to {
+    transform: translate(1rem, 0);
+    background: green;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes float2 {
+  from {
+    bottom: 130px;
+    left: 60px;
+  }
+  to {
+    bottom: 500px;
+    left: 0;
+    background: green;
+    opacity: 0;
+  }
+}
+@keyframes feed {
+  from {
+    transform: translate3d(13rem, 0rem, 0);
+  }
+  to {
+    transform: translate3d(22rem, 15rem, 0);
+    opacity: 0;
+  }
+}
+.fish-container {
+  position: relative;
+  margin: 50px;
+  animation: 11s swim3 infinite;
+  -webkit-animation: 11s swim3 infinite;
+}
+.fish-container img {
+  animation: 11s swim2 infinite;
+  transform: rotate(90deg);
+  -webkit-animation: 11s swim2 infinite;
+  -webkit-transform: rotate(90deg);
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  background: lightblue;
+  border-radius: 50%;
+  margin: 26px;
+  position: absolute;
+}
+.bubble.bubble-one {
+  animation: float 8s infinite;
+  -webkit-animation: float 8s infinite;
+}
+.bubble.bubble-two {
+  right: 20px;
+  animation: float2 10s infinite;
+  -webkit-animation: float2 10s infinite;
+}
+
+.food {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: blue;
+  animation: feed 4s;
+  animation-iteration-count: 3;
+  position: absolute;
+  z-index: 3;
+}
+
+@keyframes shake {
+  from {
+    transform: translate3d(-1px, 0, 0);
+  }
+  to {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=feed-fish.css.map */

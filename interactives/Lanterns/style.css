@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #000C22;
+  background: radial-gradient(#000C22, #000C22, #00020A);
+}
+
+.wrapper {
+  margin: 2rem auto;
+}
+
+.round {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

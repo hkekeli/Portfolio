@@ -1,0 +1,123 @@
+.row-gut-bottom-none {
+  margin-bottom: 0;
+}
+
+.water-container-wrapper {
+  overflow: hidden;
+  height: 750px;
+  width: 100%;
+}
+
+.water-container {
+  min-height: 800px;
+  position: relative;
+  background: rgba(73, 143, 225, 0.21);
+}
+@media screen and (min-width: 70rem) {
+  .water-container {
+    margin-top: 14rem;
+  }
+}
+
+.shark-container {
+  animation: swim 30s infinite;
+  -webkit-animation: swim 30s infinite;
+  position: absolute;
+  z-index: -1;
+}
+
+.mr-shark {
+  background: url("img/animate-shark/shark.png") no-repeat;
+  height: 293px;
+  width: 435px;
+  background-size: 100%;
+  animation: switchshark 7s infinite;
+  -webkit-animation: switchshark 5s infinite;
+  -webkit-animation-timing-function: step-start;
+  animation-timing-function: step-start;
+  transition: 3s;
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  background: lightblue;
+  border-radius: 50%;
+  margin: 26px;
+}
+
+.bubble.one {
+  animation: float 8s infinite;
+  -webkit-animation: float 8s infinite;
+}
+
+.bubble.two {
+  animation: float2 10s infinite;
+  -webkit-animation: float2 10s infinite;
+  right: 20px;
+}
+
+@keyframes swim {
+  0% {
+    transform: translate3d(110vw, -6rem, 0);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translate3d(25vw, 1rem, 0);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate3d(-30vw, 0, 0);
+  }
+}
+@keyframes pulse {
+  35% {
+    box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.37);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(74, 144, 226, 0.37);
+  }
+  100% {
+    box-shadow: 0 0 0 20px #F7F7F7;
+    transition: 2s;
+  }
+}
+@keyframes float {
+  from {
+    transform: translate3d(7vw, 289px, 0);
+  }
+  to {
+    transform: translate3d(7vw, -238px, 0);
+    background: yellow;
+    opacity: 0;
+  }
+}
+@keyframes float2 {
+  from {
+    transform: translate3d(8vw, 289px, 0);
+  }
+  to {
+    transform: translate3d(8vw, -238px, 0);
+    background: green;
+    opacity: 0;
+  }
+}
+@keyframes switchshark {
+  0% {
+    background: url("/img/animate-shark/shark.png") no-repeat;
+  }
+  10% {
+    background: url("img/animate-shark/shark-mouth-open.png") no-repeat;
+  }
+  35% {
+    background: url("img/animate-shark/shark.png") no-repeat;
+  }
+  50% {
+    background: url("img/animate-shark/shark-mouth-open.png") no-repeat;
+  }
+  100% {
+    background: url("img/animate-shark/shark.png") no-repeat;
+  }
+}
+
+/*# sourceMappingURL=shark.css.map */

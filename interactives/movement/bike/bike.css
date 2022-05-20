@@ -1,0 +1,87 @@
+body {
+    background: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes drive {
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(1);
+    }
+    35%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: scale(2);
+    }
+    75%{
+        transform: scale(3);
+    }
+    85%{
+        transform: scale(12);
+    }
+    90%{
+        transform: scale(15);
+    }
+    100%{
+        transform: skew(2deg);
+    }
+}
+
+@keyframes bus {
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(1);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: scale(2);
+    }
+    75%{
+        transform: scale(3);
+    }
+    85%{
+        transform: scale(12);
+    }
+    90%{
+        transform: scale(15);
+    }
+    100%{
+        transform: skew(2deg);
+    }
+}
+
+
+.wrapper {
+    text-align: center;
+    width: 325px;
+    margin: 350px auto 0;
+    padding: 50px;
+    border: 1px solid;
+    overflow: hidden;
+
+}
+
+.bike{
+    width: 30px;
+    margin: 0 auto;
+    animation: drive 10s 1;
+    animation-timing-function: ease-in;
+}
+.bus{
+     animation: bus 10s 1;
+    animation-timing-function: ease-in;
+}
+.bike , .bus{
+    display: inline-block;
+}

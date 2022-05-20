@@ -1,0 +1,254 @@
+$black: #000;
+$light-gray: #909090;
+$dark-gray: #5d5d5d;
+$darker-gray: #4a4a4a;
+
+// Layout
+$base-value: 100px; // Initial 100px;
+$value-2: $base-value + 15px;    //115px;
+$value-3: $base-value + 19px;   // 119px;
+$value-4: $base-value + 40px;   //140px;
+$value-5: $base-value + 28px;   //128px
+$value-6: $base-value + 48px;   //148px
+$value-7: $base-value + 76px ;  //176px
+$value-8: $base-value + 107px;  //207px;
+$value-9: $base-value + 119px;  //219px,
+$value-10: $base-value + 121px; //221px
+$value-11: $base-value + 160px; //260px;
+
+// z-index
+$z-index-below: -1;
+$z-index-default: 1;
+$z-index-above: 2;
+
+// wings
+$wing-divider-width: $value-8;
+$wing-divider-height: $value-5;
+
+// head
+$head-el-width: $base-value;
+$head-detail-width: $value-2;
+
+// Tail
+
+$tail-height: $value-4;
+
+@mixin style($background-color, $width, $height) {
+  width: $width;
+  height: $height;
+  background: $background-color;
+}
+
+//
+//@mixin clip-path($path) {
+//  -webkit-clip-path: $path;
+//  clip-path: $path;
+//}
+
+@mixin clip-path($path) {
+  -webkit-clip-path: $path;
+  clip-path: $path;
+}
+
+svg {
+  fill: blue;
+  width: 100px;
+  stroke: none;
+}
+
+.wrapper {
+	position: relative;
+	max-width: 960px;
+}
+
+.shape {
+	max-width: 500px;
+	position: relative;
+}
+
+.head-wrapper {
+	float: right;
+	transform: translate(72px, -132px);
+	.head {
+		@include style($dark-gray, $head-el-width, $value-4);
+		@include clip-path(polygon(57% 14%, 99% 31%, 74% 83%, 4% 51%));
+		transform: rotate(11deg);
+	}
+	.beak {
+		@include style($black, $head-el-width, $base-value);
+		@include clip-path(polygon(0 79%, 0 94%, 73% 88%));
+		transform: translate(96px, -170px);
+	}
+}
+
+.wings {
+	position: absolute;
+	right: 120px;
+	transform: translate(135px, -121px);
+	z-index: $z-index-above;
+
+	.wing-wrapper {
+      .wing-two {
+          @include style($black, 221px, $value-7);
+          @include clip-path(polygon(60% 2%, 100% 47%, 79% 69%, 0 23%));
+      }
+
+      .wing-one-top {
+          @include style($light-gray, $wing-divider-width, $wing-divider-height);
+          @include clip-path(polygon(64% 6%, 0% 34%, 50% 51%));
+          position: absolute;
+          top: 29px;
+          z-index: $z-index-default;
+      }
+
+      .wing-one-right {
+          @include clip-path(polygon(99% 57%, 54% 12%, 45% 39%));
+          @include style($darker-gray, $wing-divider-width, $wing-divider-height);
+          margin-left: 9px;
+          position: absolute;
+          top: 44px;
+          z-index: $z-index-default;
+      }
+
+      .wing-one-bottom {
+            @include style($dark-gray, 219px, $value-7);
+            @include clip-path(polygon(100% 71%, 0% 46%, 80% 92%));
+            position: absolute;
+            top: -8px;
+            z-index: $z-index-default;
+      	}
+
+      .wing-one-lower {
+            @include style($black, 89px, 61px);
+            @include clip-path(polygon(48% 27%, 5% 33%, 55% 51%));
+            left: -23px;
+            position: absolute;
+            top: 54px;
+
+      		&--two {
+      			background: $light-gray;
+      			top: 64px;
+      			width: 148px;
+      		}
+      	}
+    }
+
+  .wing-one-accent-right {
+    @include style(lighten($black, 10%), 221px, $value-7);
+    @include clip-path(polygon(60% 2%, 100% 47%, 79% 69%, 0 23%));
+    margin-top: -9rem;
+  }
+
+}
+
+.mid {
+	@include style($black, 230px, 323px);
+	@include clip-path(polygon(73% 28%, -8% 54%, 100% 59%));
+	margin-left: 52px;
+	position: absolute;
+	top: -148px;
+	transform: rotate(-9deg);
+}
+
+.tail {
+	transform: translate(218px, 5px);
+	.top {
+		@include style(lighten($black, 35%), $value-4, $value-4);
+		@include clip-path(polygon(78% 0, 1% 48%, 68% 42%));
+	}
+	.top-two {
+      @include style(#7a7a7a, 172px, 77px);
+      @include clip-path(polygon(48% 56%, 65% -1%, 25% 67%));
+      left: -17px;
+      position: absolute;
+      top: 10px;
+	}
+
+	.bottom {
+		@include style($black, $value-4, $tail-height);
+		@include clip-path(polygon(69% 42%, 18% 48%, 65% 54%));
+		transform: translate(-25px, -$value-4);
+	}
+
+	.long-tail {
+		@include style($black, $value-11, $tail-height);
+		@include clip-path(polygon(73% 24%, 65% 14%, 0 70%));
+		left: -117px;
+		position: absolute;
+		top: 26px;
+		z-index: $z-index-below;
+	}
+}
+
+.head-container {
+	height: $base-value;
+	position: absolute;
+	top: 26px;
+	z-index: $z-index-default;
+	.one {
+      @include style(#969696, $head-detail-width, $value-3);
+      @include clip-path(polygon(94% 23%, 51% 3%, 17% 32%));
+	}
+	.two {
+      @include style(#6d6d6d, $head-detail-width, $value-3);
+      @include clip-path(polygon(95% 2%, 50% 6%, 67% 47%));
+      position: relative;
+      top: -95px;
+	}
+	.three {
+      @include style(#7f7f7f, $head-detail-width, $value-2);
+      @include clip-path(polygon(61% 0%, 15% 8%, 68% 45%));
+      position: relative;
+      top: -209px;
+	}
+}
+
+.neck {
+	float: right;
+	height: $base-value;
+	position: relative;
+	right: -195px;
+	top: -110px;
+
+    .one {}
+	.two {
+		@include clip-path(polygon(52% -2%, 40% 29%, 68% 42%));
+		background: lighten($black, 50%);
+		height: 48px;
+		position: relative;
+		right: 14px;
+		top: 73px;
+	}
+	.three {
+	  @include style($black, 148px, $base-value);
+      @include clip-path(polygon(69% 28%, 42% 21%, 54% 52%));
+      position: relative;
+      right: 13px;
+      top: 18px;
+	}
+	.four {
+      @include style($light-gray, $base-value, $base-value);
+      @include clip-path(polygon(98% -3%, 10% 51%, 63% 45%));
+      position: relative;
+      right: 8px;
+      top: -54px;
+	}
+}
+
+.feet {
+	position: absolute;
+	top: 29px;
+	right: 83px;
+	z-index: $z-index-default;
+  .leg {
+    @include style($black, $base-value, $base-value);
+    @include clip-path(polygon(49% 10%, 27% 24%, 64% 11%));
+  }
+  .foot {
+	  @include style($black, $base-value, 25px);
+    @include clip-path(polygon(76% 43%, 83% 35%, 68% 21%));
+	  position: absolute;
+   top: 12px;
+   left: -43px;
+  }
+}

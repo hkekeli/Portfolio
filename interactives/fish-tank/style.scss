@@ -1,0 +1,168 @@
+$body: #171717;
+$faded-green: rgba(90, 173, 51, 0.31);
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background: $body;
+}
+
+.wrapper {
+	width: 800px;
+	position: relative;
+}
+
+.fish {
+	position: relative;
+	width: 250px;
+	animation: swim 10s infinite;
+	.fishbod {
+		background: #ffffff;
+		padding: 3rem;
+		height: 1rem;
+		width: 8rem;
+		border-radius: 50%;
+		margin: -0.5rem 8rem;
+		.eye {
+			background: #969696;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			float: right;
+		}
+	}
+}
+
+.tail {
+	transform: rotate(631deg);
+	perspective: 350px;
+	.cir {
+		width: 20px;
+		height: 72px;
+		border-radius: 50%;
+		border: 6px solid rgba(0, 0, 0, 0);
+		background: rgba(222, 87, 87, 0.31);
+		display: inline-block;
+		&--tail {
+			transform: rotate(130deg);
+			animation: 2s tail-one infinite;
+		}
+		&--tail-two {
+			transform: rotate(-130deg);
+			animation: 2s tail-two infinite;
+		}
+	}
+}
+
+.bubbles {
+	width: 20px;
+	height: 20px;
+	background: lightblue;
+	border-radius: 50%;
+	margin: 26px;
+	animation: float 8s infinite;
+	-webkit-animation: float 8s infinite;
+	position: absolute;
+}
+
+.bubble {
+	width: 20px;
+	height: 20px;
+	background: lightblue;
+	border-radius: 50%;
+	margin: 26px;
+	position: absolute;
+	right: 20px;
+	animation: float2 10s infinite;
+	-webkit-animation: float2 10s infinite;
+}
+
+@keyframes tail-one {
+	from {
+		transform: rotateX(127deg);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
+}
+
+@keyframes tail-two {
+	from {
+		transform: rotateX(-127deg);
+	}
+	to {
+		transform: rotateX(-180deg);
+	}
+}
+
+@keyframes swim {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to {
+		top: 0;
+		left: 700px;
+	}
+}
+
+@keyframes float {
+	from {
+		bottom: 130px;
+		left: 0;
+	}
+	to {
+		bottom: 500px;
+		left: 0;
+		background: yellow;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes float {
+	from {
+		bottom: 130px;
+		left: 0;
+	}
+	to {
+		bottom: 500px;
+		left: 0;
+		background: yellow;
+		opacity: 0;
+	}
+}
+
+@keyframes float2 {
+	from {
+		bottom: 130px;
+		left: 60px;
+	}
+	to {
+		bottom: 500px;
+		left: 0;
+		background: green;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes float2 {
+	from {
+		bottom: 130px;
+		left: 60px;
+	}
+	to {
+		bottom: 500px;
+		left: 0;
+		background: green;
+		opacity: 0;
+	}
+}

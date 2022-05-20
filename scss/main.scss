@@ -7,8 +7,6 @@ $sm-value: 12px;
 
 // Typography
 $branding: 'Source Serif Pro', serif;
-$branding-secondary: 'Helvetica Neue', sans-serif;
-$branding: 'Helvetica Neue', sans-serif;
 
 // Font sizes
 $fs-sm: 1em;
@@ -22,6 +20,7 @@ $branding-bold: 700;
 
 // Colors
 $black: #000;
+$red: #ff0000;
 $light-gray: #4C4C4C;
 $white: #FFF;
 $secondary-color: #D5FFF5;
@@ -33,10 +32,10 @@ $z-index-default: 1;
 $z-index-above: 2;
 
 
-$emphasis: inset 0px -8px 0 #6e7bd9ad;
+$emphasis: inset 0px -8px 0 rgba(255, 0, 0, 0.11);
 
 // Layout
-$container-width: 80rem;
+$container-width: 50rem;
 
 
 // Reset
@@ -45,14 +44,14 @@ html {
   box-sizing: border-box;
 }
 
-html,
-body {
+html.home,
+body.home {
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow: hidden;
- -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Site
@@ -75,7 +74,7 @@ a {
   &,
   &:link,
   &:active {
-    color: $black;
+    color: $red;
     text-decoration: none;
   }
 
@@ -102,8 +101,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: $branding-secondary;
-  padding: 0 1rem;
+  padding: 2rem 0;
 
     @media #{$lg-screen} {
         font-size: $fs-sm;
@@ -114,11 +112,11 @@ nav {
     font-size: 1.5em;
     line-height: 2;
   }
-
 }
 
 a.logo {
   font-weight: $branding-bold;
+  color: $black;
 }
 
 .nav-links {
@@ -129,16 +127,19 @@ a.logo {
   }
 }
 
-main {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 // Layout
-
 .container {
     padding: 0 1rem;
+    margin: auto;
 
     @media #{$md-screen} {
         max-width: $container-width;
@@ -146,10 +147,14 @@ main {
   }
 }
 
-.intro {
-    @media #{$lg-screen} {
-        width: 65%;
-    }
+.main {
+    padding: 0 1rem;
+    margin: auto;
+
+    @media #{$md-screen} {
+        max-width: $container-width;
+        padding: 0 2rem;
+  }
 }
 
 .pitch {
@@ -170,7 +175,6 @@ main {
 }
 
 .about {
-  font-family: $branding;
   font-size: 1em;
 
    @media #{$lg-screen} {
@@ -179,13 +183,38 @@ main {
   }
 }
 
-footer {
-  font-family: $branding-secondary;
+.work-container {
+  margin-top: 1rem;
+
+  @media #{$lg-screen} {
+    margin-top: 3rem;
+  }
+}
+
+.work-description {
+  margin-top: 4px;
+}
+
+.work  {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.footer {
   margin-top: 3rem;
   font-size: $fs-sm;
 
   @media #{$lg-screen} {
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding-top: 1rem;
   }
 }
@@ -195,14 +224,20 @@ footer {
 
   li {
     list-style: none;
-    margin-left: 2rem;
     margin-bottom: 5px;
+    margin-right: 1rem;
 
       @media #{$lg-screen} {
-          margin-left: 3rem;
+          margin-right: 3rem;
       }
   }
+
+  a {
+    color: $black;
+  }
 }
+
+// FLEX STYLES
 
 .flex {
   display: flex;

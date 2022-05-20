@@ -1,0 +1,56 @@
+html,body { overflow: hidden;
+background: #f1f1f1;
+}
+
+
+@keyframes drive {
+    0%{
+        transform: scale(0.01);
+    }
+    25%{
+        transform: scale(calc(1*.01));
+    }
+    35%{
+        transform: scale(calc(2*.01)) rotate(30deg);
+    }
+    50%{
+        transform: scale(calc(4*.01));
+    }
+    75%{
+        transform: scale(calc(5*.01)) rotate(10deg);
+    }
+    85%{
+        transform: scale(calc(8*.01));
+    }
+    90%{
+        transform: scale(calc(10*.01));
+    }
+    100%{
+        transform: scale(calc(15*.01)) rotate(-30deg);
+    }
+}
+
+
+.wrapper{
+    width: 600px;
+    height: 360px;
+    margin: 0 auto;
+    border: 1px solid;
+    text-align: center;
+}
+.car{
+    width: 30px;
+    height: 30px;
+}
+.driveMe{
+    width: 1000%;
+    height: 1000%;
+    position: relative;
+    bottom: 1619px;
+    left: -2743px;
+  transition: all 1s linear;
+  transform: scale(0.01);
+    animation: drive 10s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}

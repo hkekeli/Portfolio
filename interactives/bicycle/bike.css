@@ -1,0 +1,162 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fbecbf;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 8rem;
+  perspective: 100px;
+}
+
+.bike {
+  display: flex;
+  animation: 13s pedal 1;
+  animation-timing-function: ease-out;
+}
+
+.bar-component {
+  margin-top: -11rem;
+  margin-left: 1rem;
+}
+
+.bar {
+  width: 20px;
+  background: #795548;
+}
+.bar--seat-support {
+  transform: rotate(-24deg);
+  height: 11rem;
+  margin-right: 10.5rem;
+  border-top: 7.7rem solid #fff;
+}
+.bar--handle-support {
+  min-height: 21rem;
+  transform: rotate(-27deg);
+  border-bottom-left-radius: 2rem;
+  position: absolute;
+  right: 29%;
+  bottom: 38%;
+  box-shadow: inset 0.7rem 0rem 0 #eae9e9;
+  z-index: 1;
+  background: #fff8f6;
+}
+
+.handlebar {
+  position: absolute;
+  top: -182px;
+  margin-left: -7rem;
+  width: 8rem;
+  height: 29px;
+  background: #fff;
+  z-index: 1;
+  transform: rotate(-31deg);
+}
+
+.seat {
+  border-top-right-radius: 4rem;
+  border-top-left-radius: 1rem;
+  position: absolute;
+  margin-left: -5rem;
+  width: 128px;
+  height: 31px;
+  background: #fff;
+  z-index: 1;
+}
+
+.rail-component {
+  position: absolute;
+  right: 16.7rem;
+  bottom: 6.9rem;
+}
+.rail-component .rectangle {
+  width: 10rem;
+  height: 8rem;
+  border: 20px solid #FFC107;
+  border-right: 25px solid #ff5722;
+  border-left: 27px solid #ff5722;
+  transform: skewX(-35deg);
+  border-bottom-right-radius: 2rem;
+}
+
+.wheel-w {
+  animation: 3s spin 7;
+}
+
+.wheel {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  border: 1rem double #fff;
+  box-shadow: 0 0 0 1rem #795548;
+  overflow: hidden;
+  transform: rotateY(1deg);
+  animation: flashy 0.4s 4;
+}
+
+.wheel-lines {
+  height: 0.5rem;
+  background: #fff;
+  display: block;
+}
+.wheel-lines--v {
+  transform: rotate(90deg);
+  margin-top: 5.7rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(1turn);
+  }
+  100% {
+    transform: rotate(5turn);
+  }
+}
+@keyframes pers {
+  0% {
+    perspective: 100px;
+  }
+  100% {
+    perspective: 160px;
+  }
+}
+@keyframes flashy {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes pedal {
+  0% {
+    opacity: 1;
+    transform: translate3d(-100vw, 0, -5vw);
+  }
+  5% {
+    transform: translate3d(-20vw, 0, 0);
+  }
+  50% {
+    transform: translate3d(-15vw, 1rem, 0);
+  }
+  80% {
+    transform: translate3d(25vw, 0rem, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(110vw, 1rem, 0);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=bike.css.map */

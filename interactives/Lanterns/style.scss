@@ -1,0 +1,27 @@
+$night: #00020A;
+$night-light: #000C22;
+$gray: #252016;
+$light: #ECC796;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: $night-light;
+  background: radial-gradient($night-light, $night-light, $night);
+}
+
+
+.wrapper {
+  margin: 2rem auto;
+}
+
+.round {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+}
