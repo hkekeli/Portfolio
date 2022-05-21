@@ -15,27 +15,14 @@ $seat: $white;
 $handlebar: $white;
 $bar-width: 29px;
 
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.bike-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $body;
-}
+  width: 100%;
+  height: 100%;
+    background: $body;
 
-// Layout
-.wrapper {
-  position: relative;
-  margin-top: 8rem;
-  perspective: 100px;
 }
 
 // Bike
@@ -127,7 +114,7 @@ body {
     box-shadow: 0 0 0 1rem $wheel;
     overflow: hidden;
     transform: rotateY(1deg);
-    animation: flashy .4s 4;
+    animation: animate-wheels .4s 4;
 }
 
 .wheel-lines {
@@ -150,17 +137,7 @@ body {
   }
 }
 
-@keyframes pers {
-    0% {
-      perspective: 100px;
-    }
-    100% {
-      perspective: 160px;
-
-    }
-}
-
-@keyframes flashy {
+@keyframes animate-wheels {
   from {
     transform: scale(0,0);
   }

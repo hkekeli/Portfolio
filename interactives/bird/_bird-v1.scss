@@ -1,3 +1,6 @@
+@import 'reset';
+@import 'bird-v1-animation';
+
 $black: #000;
 $light-gray: #909090;
 $dark-gray: #5d5d5d;
@@ -210,7 +213,6 @@ svg {
 	right: -195px;
 	top: -110px;
 
-    .one {}
 	.two {
 		@include clip-path(polygon(52% -2%, 40% 29%, 68% 42%));
 		background: lighten($black, 50%);
