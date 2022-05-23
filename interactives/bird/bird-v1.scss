@@ -1,5 +1,5 @@
-@import 'reset';
-@import 'bird-v1-animation';
+@import '../../scss/media-queries';
+@import '../../scss/animation-mixins';
 
 $black: #000;
 $light-gray: #909090;
@@ -42,26 +42,9 @@ $tail-height: $value-4;
   background: $background-color;
 }
 
-//
-//@mixin clip-path($path) {
-//  -webkit-clip-path: $path;
-//  clip-path: $path;
-//}
-
 @mixin clip-path($path) {
   -webkit-clip-path: $path;
   clip-path: $path;
-}
-
-svg {
-  fill: blue;
-  width: 100px;
-  stroke: none;
-}
-
-.wrapper {
-	position: relative;
-	max-width: 960px;
 }
 
 .shape {
@@ -81,6 +64,29 @@ svg {
 		@include style($black, $head-el-width, $base-value);
 		@include clip-path(polygon(0 79%, 0 94%, 73% 88%));
 		transform: translate(96px, -170px);
+	}
+}
+
+.head-container {
+	height: $base-value;
+	position: absolute;
+	top: 26px;
+	z-index: $z-index-default;
+	.one {
+      @include style(#969696, $head-detail-width, $value-3);
+      @include clip-path(polygon(94% 23%, 51% 3%, 17% 32%));
+	}
+	.two {
+      @include style(#6d6d6d, $head-detail-width, $value-3);
+      @include clip-path(polygon(95% 2%, 50% 6%, 67% 47%));
+      position: relative;
+      top: -95px;
+	}
+	.three {
+      @include style(#7f7f7f, $head-detail-width, $value-2);
+      @include clip-path(polygon(61% 0%, 15% 8%, 68% 45%));
+      position: relative;
+      top: -209px;
 	}
 }
 
@@ -183,29 +189,6 @@ svg {
 	}
 }
 
-.head-container {
-	height: $base-value;
-	position: absolute;
-	top: 26px;
-	z-index: $z-index-default;
-	.one {
-      @include style(#969696, $head-detail-width, $value-3);
-      @include clip-path(polygon(94% 23%, 51% 3%, 17% 32%));
-	}
-	.two {
-      @include style(#6d6d6d, $head-detail-width, $value-3);
-      @include clip-path(polygon(95% 2%, 50% 6%, 67% 47%));
-      position: relative;
-      top: -95px;
-	}
-	.three {
-      @include style(#7f7f7f, $head-detail-width, $value-2);
-      @include clip-path(polygon(61% 0%, 15% 8%, 68% 45%));
-      position: relative;
-      top: -209px;
-	}
-}
-
 .neck {
 	float: right;
 	height: $base-value;
@@ -213,6 +196,7 @@ svg {
 	right: -195px;
 	top: -110px;
 
+    .one {}
 	.two {
 		@include clip-path(polygon(52% -2%, 40% 29%, 68% 42%));
 		background: lighten($black, 50%);
@@ -253,4 +237,18 @@ svg {
    top: 12px;
    left: -43px;
   }
+}
+
+// Animation styles
+@import "bird-v1-animation";
+
+.css-bird-no-animation {
+	animation: none;
+	margin-top: 9rem;
+	transform: scale(0.7);
+
+	.long-tail,
+	.wing-wrapper {
+  		animation: none;
+	}
 }

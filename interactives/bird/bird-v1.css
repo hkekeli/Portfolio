@@ -1,0 +1,316 @@
+.row-gut-bottom-none {
+  margin-bottom: 0;
+}
+
+.shape {
+  max-width: 500px;
+  position: relative;
+}
+
+.head-wrapper {
+  float: right;
+  transform: translate(72px, -132px);
+}
+.head-wrapper .head {
+  width: 100px;
+  height: 140px;
+  background: #5d5d5d;
+  -webkit-clip-path: polygon(57% 14%, 99% 31%, 74% 83%, 4% 51%);
+  clip-path: polygon(57% 14%, 99% 31%, 74% 83%, 4% 51%);
+  transform: rotate(11deg);
+}
+.head-wrapper .beak {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  -webkit-clip-path: polygon(0 79%, 0 94%, 73% 88%);
+  clip-path: polygon(0 79%, 0 94%, 73% 88%);
+  transform: translate(96px, -170px);
+}
+
+.head-container {
+  height: 100px;
+  position: absolute;
+  top: 26px;
+  z-index: 1;
+}
+.head-container .one {
+  width: 115px;
+  height: 119px;
+  background: #969696;
+  -webkit-clip-path: polygon(94% 23%, 51% 3%, 17% 32%);
+  clip-path: polygon(94% 23%, 51% 3%, 17% 32%);
+}
+.head-container .two {
+  width: 115px;
+  height: 119px;
+  background: #6d6d6d;
+  -webkit-clip-path: polygon(95% 2%, 50% 6%, 67% 47%);
+  clip-path: polygon(95% 2%, 50% 6%, 67% 47%);
+  position: relative;
+  top: -95px;
+}
+.head-container .three {
+  width: 115px;
+  height: 115px;
+  background: #7f7f7f;
+  -webkit-clip-path: polygon(61% 0%, 15% 8%, 68% 45%);
+  clip-path: polygon(61% 0%, 15% 8%, 68% 45%);
+  position: relative;
+  top: -209px;
+}
+
+.wings {
+  position: absolute;
+  right: 120px;
+  transform: translate(135px, -121px);
+  z-index: 2;
+}
+.wings .wing-wrapper .wing-two {
+  width: 221px;
+  height: 176px;
+  background: #000;
+  -webkit-clip-path: polygon(60% 2%, 100% 47%, 79% 69%, 0 23%);
+  clip-path: polygon(60% 2%, 100% 47%, 79% 69%, 0 23%);
+}
+.wings .wing-wrapper .wing-one-top {
+  width: 207px;
+  height: 128px;
+  background: #909090;
+  -webkit-clip-path: polygon(64% 6%, 0% 34%, 50% 51%);
+  clip-path: polygon(64% 6%, 0% 34%, 50% 51%);
+  position: absolute;
+  top: 29px;
+  z-index: 1;
+}
+.wings .wing-wrapper .wing-one-right {
+  -webkit-clip-path: polygon(99% 57%, 54% 12%, 45% 39%);
+  clip-path: polygon(99% 57%, 54% 12%, 45% 39%);
+  width: 207px;
+  height: 128px;
+  background: #4a4a4a;
+  margin-left: 9px;
+  position: absolute;
+  top: 44px;
+  z-index: 1;
+}
+.wings .wing-wrapper .wing-one-bottom {
+  width: 219px;
+  height: 176px;
+  background: #5d5d5d;
+  -webkit-clip-path: polygon(100% 71%, 0% 46%, 80% 92%);
+  clip-path: polygon(100% 71%, 0% 46%, 80% 92%);
+  position: absolute;
+  top: -8px;
+  z-index: 1;
+}
+.wings .wing-wrapper .wing-one-lower {
+  width: 89px;
+  height: 61px;
+  background: #000;
+  -webkit-clip-path: polygon(48% 27%, 5% 33%, 55% 51%);
+  clip-path: polygon(48% 27%, 5% 33%, 55% 51%);
+  left: -23px;
+  position: absolute;
+  top: 54px;
+}
+.wings .wing-wrapper .wing-one-lower--two {
+  background: #909090;
+  top: 64px;
+  width: 148px;
+}
+.wings .wing-one-accent-right {
+  width: 221px;
+  height: 176px;
+  background: #1a1a1a;
+  -webkit-clip-path: polygon(60% 2%, 100% 47%, 79% 69%, 0 23%);
+  clip-path: polygon(60% 2%, 100% 47%, 79% 69%, 0 23%);
+  margin-top: -9rem;
+}
+
+.mid {
+  width: 230px;
+  height: 323px;
+  background: #000;
+  -webkit-clip-path: polygon(73% 28%, -8% 54%, 100% 59%);
+  clip-path: polygon(73% 28%, -8% 54%, 100% 59%);
+  margin-left: 52px;
+  position: absolute;
+  top: -148px;
+  transform: rotate(-9deg);
+}
+
+.tail {
+  transform: translate(218px, 5px);
+}
+.tail .top {
+  width: 140px;
+  height: 140px;
+  background: #595959;
+  -webkit-clip-path: polygon(78% 0, 1% 48%, 68% 42%);
+  clip-path: polygon(78% 0, 1% 48%, 68% 42%);
+}
+.tail .top-two {
+  width: 172px;
+  height: 77px;
+  background: #7a7a7a;
+  -webkit-clip-path: polygon(48% 56%, 65% -1%, 25% 67%);
+  clip-path: polygon(48% 56%, 65% -1%, 25% 67%);
+  left: -17px;
+  position: absolute;
+  top: 10px;
+}
+.tail .bottom {
+  width: 140px;
+  height: 140px;
+  background: #000;
+  -webkit-clip-path: polygon(69% 42%, 18% 48%, 65% 54%);
+  clip-path: polygon(69% 42%, 18% 48%, 65% 54%);
+  transform: translate(-25px, -140px);
+}
+.tail .long-tail {
+  width: 260px;
+  height: 140px;
+  background: #000;
+  -webkit-clip-path: polygon(73% 24%, 65% 14%, 0 70%);
+  clip-path: polygon(73% 24%, 65% 14%, 0 70%);
+  left: -117px;
+  position: absolute;
+  top: 26px;
+  z-index: -1;
+}
+
+.neck {
+  float: right;
+  height: 100px;
+  position: relative;
+  right: -195px;
+  top: -110px;
+}
+.neck .two {
+  -webkit-clip-path: polygon(52% -2%, 40% 29%, 68% 42%);
+  clip-path: polygon(52% -2%, 40% 29%, 68% 42%);
+  background: gray;
+  height: 48px;
+  position: relative;
+  right: 14px;
+  top: 73px;
+}
+.neck .three {
+  width: 148px;
+  height: 100px;
+  background: #000;
+  -webkit-clip-path: polygon(69% 28%, 42% 21%, 54% 52%);
+  clip-path: polygon(69% 28%, 42% 21%, 54% 52%);
+  position: relative;
+  right: 13px;
+  top: 18px;
+}
+.neck .four {
+  width: 100px;
+  height: 100px;
+  background: #909090;
+  -webkit-clip-path: polygon(98% -3%, 10% 51%, 63% 45%);
+  clip-path: polygon(98% -3%, 10% 51%, 63% 45%);
+  position: relative;
+  right: 8px;
+  top: -54px;
+}
+
+.feet {
+  position: absolute;
+  top: 29px;
+  right: 83px;
+  z-index: 1;
+}
+.feet .leg {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  -webkit-clip-path: polygon(49% 10%, 27% 24%, 64% 11%);
+  clip-path: polygon(49% 10%, 27% 24%, 64% 11%);
+}
+.feet .foot {
+  width: 100px;
+  height: 25px;
+  background: #000;
+  -webkit-clip-path: polygon(76% 43%, 83% 35%, 68% 21%);
+  clip-path: polygon(76% 43%, 83% 35%, 68% 21%);
+  position: absolute;
+  top: 12px;
+  left: -43px;
+}
+
+.shape {
+  animation: fly-animation 6s 1 forwards;
+  transform: rotateY(21deg);
+}
+
+.long-tail {
+  animation: 2s tail-animation 2 forwards;
+}
+
+.wing-wrapper {
+  animation: 0.4s wing-animation infinite forwards;
+}
+
+.head-wrapper {
+  animation: 1s head-animation 1 forwards;
+  animation-delay: 5s;
+}
+
+@keyframes tail-animation {
+  0% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+@keyframes wing-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translate(21px, -27px) rotate(14deg);
+  }
+  100% {
+    transform: translate(57px, 51px) rotate(-82deg);
+  }
+}
+@keyframes head-animation {
+  100% {
+    transform: translate(40px, -91px) rotate(76deg);
+  }
+}
+@keyframes fly-animation {
+  0% {
+    transform: translate3d(-25vw, 315px, 11px) rotate(334deg);
+  }
+  50% {
+    transform: translate3d(5vw, 138px, 11px) rotateY(21deg);
+  }
+  70% {
+    transform: translate3d(25vw, 138px, 11px) rotateY(21deg);
+  }
+  85% {
+    transform: translate3d(35vw, 176px, 0) rotateY(-135deg);
+  }
+  87% {
+    transform: translate3d(40vw, 304px, 0) rotateY(-153deg) rotate(295deg);
+  }
+  100% {
+    transform: translate3d(-25vw, 315px, 11px) rotate(334deg);
+  }
+}
+.css-bird-no-animation {
+  animation: none;
+  margin-top: 9rem;
+  transform: scale(0.7);
+}
+.css-bird-no-animation .long-tail,
+.css-bird-no-animation .wing-wrapper {
+  animation: none;
+}
+
+/*# sourceMappingURL=bird-v1.css.map */

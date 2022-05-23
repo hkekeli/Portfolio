@@ -1,22 +1,23 @@
-<!doctype html>
-<html class="no-js" lang="eng">
-    <head>
-        <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Kekeli H. Sackey Portfolio</title>
-        <meta name="description" content="">
+        <meta name="description" content="Kekeli Sackey's Product Design Portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="../../scss/main.css">
-		<link rel="stylesheet" href="bird-v1.css">
-		<link rel="stylesheet" href="bird-v1-animation.css">
 
+        <!--Styles-->
+        <link rel="stylesheet" href="../../../scss/main.css">
+        <link rel="stylesheet" href="../../interactives.css">
+		<link rel="stylesheet" type="text/css" href="bird-v1.css" media="screen">
+
+        <!--Font Styles-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7XSLNRW9D"></script>
         <script>
@@ -26,11 +27,32 @@
 
           gtag('config', 'G-T7XSLNRW9D');
         </script>
-    </head>
-
+	</head>
 	<body>
-		<div class="wrapper">
-		<div class="shape">
+		<header class="container">
+                <nav role="navigation">
+                    <div>
+                         <a href="../../index.html" class="logo">Kekeli Sackey</a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="https://docs.google.com/presentation/d/14n_GgvRHDPg-R8QFBYvTz8w3sBmxr_33W7Az9Sj86T4/edit?usp=sharing">
+                            <svg class="icon icon-lock"><use xlink:href="#icon-lock"></use>
+                            <symbol id="icon-lock" viewBox="0 0 32 32">
+                            <path d="M18.5 14h-0.5v-6c0-3.308-2.692-6-6-6h-4c-3.308 0-6 2.692-6 6v6h-0.5c-0.825 0-1.5 0.675-1.5 1.5v15c0 0.825 0.675 1.5 1.5 1.5h17c0.825 0 1.5-0.675 1.5-1.5v-15c0-0.825-0.675-1.5-1.5-1.5zM6 8c0-1.103 0.897-2 2-2h4c1.103 0 2 0.897 2 2v6h-8v-6z"></path>
+                            </symbol>
+                        </svg>
+                            Portfolio
+                        </a>
+                        <a href="../../experiments.html">Experiments </a>
+                        <a href="mailto:kekeli@kekeli.tech">Contact</a>
+                    </div>
+                </nav>
+            </header>
+
+		<!--Flying bird without animation-->
+		<div class="container">
+			<p>CSS bird built with the CSS polygon function, 2017 </p>
+			<div class="shape css-bird-no-animation">
 			<div class="head-wrapper">
 				<div class="head-container">
 					<div class="one"></div>
@@ -75,6 +97,97 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		</div>
+		<div class="container">
+			<h3>CSS Polygon</h3>
+			 <!-- head -->
+			<svg>
+				<polygon points="57 14, 99 31, 74 83, 4 51"/>
+			</svg>
+			<!--beak-->
+			<svg>
+				<polygon points="0 79, 0 94, 73 88"/>
+			</svg>
+
+			<!--wings-->
+			 <svg>
+				<polygon points="60 2, 100 47, 79 69, 0 23"/>
+			</svg>
+
+			 <svg>
+				<!--wing top-->
+				<polygon points="64 6, 0 34, 50 51"/>
+			</svg>
+
+			 <svg>
+				<!--wing one right-->
+				<polygon points="99 57, 54 12, 45 39"/>
+			</svg>
+
+			<!-- Long Tail -->
+			<svg>
+				<polygon points="73 24, 65 14, 0 70"/>
+			</svg>
+			<!-- mid -->
+			<svg>
+				<polygon points="73 28, -8 54, 100 59"/>
+			</svg>
+
+<!--			<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="evyNzg" data-user="kekeli" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">-->
+<!--			  <span>See the Pen <a href="https://codepen.io/kekeli/pen/evyNzg">-->
+<!--			  svg polygon</a> by Kekeli (<a href="https://codepen.io/kekeli">@kekeli</a>)-->
+<!--			  on <a href="https://codepen.io">CodePen</a>.</span>-->
+<!--			</p>-->
+<!--			<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>-->
+		</div>
+		<!--Flying bird with animation-->
+		<div class="container">
+			<div class="shape">
+			<div class="head-wrapper">
+				<div class="head-container">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+				</div>
+				<div class="head"></div>
+				<div class="beak"></div>
+			</div>
+
+			<div class="neck">
+				<div class="one"></div>
+				<div class="two"></div>
+				<div class="three"></div>
+				<div class="four"></div>
+			</div>
+
+			<div class="wings">
+				<div class="wing-wrapper">
+					<div class="wing-two"></div>
+					<div class="wing-one-top"></div>
+					<div class="wing-one-right"></div>
+					<div class="wing-one-bottom"></div>
+					<div class="wing-one-lower"></div>
+					<div class="wing-one-accent-right"></div>
+					<div class="wing-one-lower wing-one-lower--two"></div>
+				</div>
+			</div>
+
+			<div class="feet">
+				<div class="leg"></div>
+				<div class="foot"></div>
+			</div>
+
+			<div class="tail">
+				<div class="mid"></div>
+				<div>
+					<div class="top"></div>
+					<div class="top-two"></div>
+					<div class="bottom "></div>
+					<div class="long-tail"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+
 	</body>
 </html>
