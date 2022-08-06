@@ -132,7 +132,7 @@ a.logo {
 }
 @media screen and (min-width: 70rem) {
   .about {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.7;
   }
 }
@@ -160,6 +160,18 @@ a.logo {
 }
 .work a {
   font-weight: bold;
+}
+
+.email-callout {
+  display: inline-flex;
+  align-items: center;
+}
+.email-callout svg {
+  margin-right: 8px;
+}
+.email-callout a {
+  color: #000;
+  box-shadow: inset 0px -8px 0 rgba(255, 0, 0, 0.11);
 }
 
 .footer {
