@@ -155,8 +155,8 @@ a.logo {
   padding: 0;
 }
 .work li {
-  display: block;
   margin-bottom: 0.5rem;
+  margin-left: 32px;
 }
 .work a {
   font-weight: bold;
